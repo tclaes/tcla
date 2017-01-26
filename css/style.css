@@ -1,6 +1,6 @@
 .btn-primary{
-	background:#313461;
-	border-color:#313461;
+	background:#DF0B05;
+	border-color:#DF0B05;
 }
 
 .jumbotron{
@@ -15,22 +15,24 @@
 }
 
 .jumbotron-main h1{
-	margin-top:60px;
+	margin-top:70px;
 	margin-bottom:30px;
+	font-size: 3em;
 }
 
 .jumbotron p.lead{
-	font-size:25px;
-	margin-bottom:60px;
+	font-size:1.5em;
+	margin-bottom:50px;
 }
 
 .jumbotron-sub{
-
+	padding: 0 60px 40px 60px;
 }
 
 .navbar{
 	margin:0;
 	color:#fff;
+	background-color: #333333;
 }
 
 .navbar a{
@@ -40,6 +42,49 @@
 
 .navbar a:hover{
 	background:none !important;
-	border-bottom:#fff 3px solid;
+	border-bottom:#DF0B05 3px solid;
 	margin-bottom:0;
+}
+
+.navbar-brand {
+	font-family: 'Roboto', 'sans-serif';
+	font-weight: bold;
+}
+
+.box {
+	text-align: center;
+}
+
+.box .glyphicon {
+	font-size: 40px;
+}
+
+.section-a {
+	background: #570200;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.section-a h1 {
+	font-size: 3em;
+}
+
+.img-full{
+	width: 100%;
+}
+
+.main-footer {
+	background: #A20400;
+	padding: 30px;
+	color: #fff;
+}
+
+.main-footer li a{
+	color: white;
+}
+
+.main-footer ul {
+	margin-top: 20px;
 }
