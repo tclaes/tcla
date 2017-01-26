@@ -4,10 +4,21 @@
 
 var main = function(){
 	
-	$("down").click(function(){
-		$("main").animate({scrollTop: '+=100vh'},800);
-	})
+	$(window).scroll(function(){
+
+        if ($(this).scrollTop() >= 60) {
+        	$('.navbar').addClass("navbar-fixed-top");
+            $('.navbar').css ("background-color","#333333");
+            console.log("test");
+        }
+        else {
+            $('.navbar').removeClass("navbar-fixed-top");
+            $('.navbar').css ("background","none");
+            console.log("terug boven");
+        }
+    });
 	
 }
+
 $(document).ready(main);
 		
