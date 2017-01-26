@@ -1,0 +1,167 @@
+/* Standard styles*/
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'roboto', sans-serif;
+  display: -webkit-flex;
+  background-color: #eeeeee;
+}
+
+.event h1 {
+  font-size: 1.5em;
+  margin: 0.2em 0px 0.2em 0px;
+}
+
+.event h2 {
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+}
+
+/* design */
+
+.no-margin {
+  margin: 0px;
+}
+
+.container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+  body {
+    background-image: url("../img/back_big.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 90%;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+    /* For desktop: */
+  body {
+    background-image: url("../img/back_big.jpg");
+    justify-content: center;
+  }
+  
+  .container {
+    width: 90%;
+    justify-content: center;
+  }
+}
+
+.block {
+  clear: both;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 0.3em;
+  height: 100px;
+  overflow: hidden;
+  background-color: white;
+  opacity: 0.7;
+}
+
+.timeline {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  -webkit-flex: 1;
+  align-items: center;
+}
+
+.date {
+  width: 55px;
+  height: 55px;
+  border: 1px solid black;
+  border-top: 10px solid red;
+  padding: 3px;
+  padding-bottom: 0px;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 1;
+}
+
+.event {
+  -webkit-flex: 3;
+  padding: 10px;
+}
+
+.open_btn {
+  display: flex;
+  align-items: center;
+  background-color: red;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+  border-left: 1px solid grey;
+}
+
+.open_click {
+  min-height: 98vh;
+}
+
+.hidden {
+  display:none;
+}
+
+.overflow {
+  overflow: auto;
+}
+
+.ontop{
+  
+  
+}
+
+/* Margin */
+
+/* Borders */
+.border-small {
+  border: 1px black solid;
+}
+
+/* Padding */
+.small-padding {
+  padding: 5px;
+}
+
+/* Sizes */
+.fullheight {
+  min-height: 100%;
+}
+
+.fullwidth {
+  min-width: 100%;
+}
+
+/* colors */
+.white {
+  background-color: white;
+}
+
+.red {
+  background-color: red;
+}
+

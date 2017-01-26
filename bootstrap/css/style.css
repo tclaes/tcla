@@ -1,0 +1,89 @@
+.btn-primary{
+	background:#DF0B05;
+	border-color:#DF0B05;
+}
+
+.jumbotron{
+	background: #333 url('../img/bg.jpg') -400px -200px;
+	color:#fff;
+	text-align: center;
+	border-bottom: 5px #f4f4f4 solid;
+}
+
+.jumbotron-main{
+	padding: 0 60px 40px 60px;
+}
+
+.jumbotron-main h1{
+	margin-top:50px;
+	margin-bottom:30px;
+	font-size: 3em;
+}
+
+.jumbotron p.lead{
+	font-size:1.5em;
+	margin-bottom:50px;
+}
+
+.jumbotron-sub{
+	padding: 0 60px 40px 60px;
+}
+
+.navbar{
+	margin:0;
+	color:#fff;
+}
+
+.navbar a{
+	color:#fff;
+	margin-bottom:3px;
+}
+
+.navbar a:hover{
+	background:none !important;
+	border-bottom:#DF0B05 3px solid;
+	margin-bottom:0;
+}
+
+.navbar-brand {
+	font-family: 'Roboto', 'sans-serif';
+	font-weight: bold;
+}
+
+.box {
+	text-align: center;
+}
+
+.box .glyphicon {
+	font-size: 40px;
+}
+
+.section-a {
+	background: #570200;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.section-a h1 {
+	font-size: 3em;
+}
+
+.img-full{
+	width: 100%;
+}
+
+.main-footer {
+	background: #A20400;
+	padding: 30px;
+	color: #fff;
+}
+
+.main-footer li a{
+	color: white;
+}
+
+.main-footer ul {
+	margin-top: 20px;
+}

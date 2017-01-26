@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		body {
+			background: #236467;
+			margin: 50px auto 50px auto;
+			text-align: center;
+			font-family: verdana;
+		}
+
+		header h1 {
+			color: #67989A;
+			font-family: verdana;
+			font-size: 2em;
+			width: 100%;
+			background: #003133;
+			padding: 20px 0px;
+			margin: 0;
+		}
+
+		#container {
+			min-width: 100%;
+			background: #67989A ;
+			margin: 0;
+			min-height: 20vh;
+		}
+
+		#note {
+			vertical-align: middle;
+			min-height: 19vh;
+			font-size: 0.75em;
+			background:#67989A;
+			color:#003133;border-radius: 5px;
+    		padding: 25px;
+    		width: 90%;
+    		text-align: center;
+    		margin: auto;
+		}
+
+		footer {
+			background: #2E4172;
+			color: #7887AB ;
+			margin: 0;
+			padding-top: 25px;
+		}
+
+		footer div {
+			font-size: 2em;
+			padding: 20px;
+		}
+
+		a.clear{
+			text-decoration: none;
+			padding: 20px;
+    		background: #061539;
+    		border-radius: 5px;
+			color: #7887AB ;
+		}
+
+		a.clear:hover{
+    		background: #7887AB;
+			color: #061539 ;
+		}
+
+
+
+	</style>
+	<script type="text/javascript">
+		function getNote(){
+			if(localStorage.getItem('note')){
+				var note = localStorage.getItem('note');
+
+			} else
+			{
+				var note = "Type your message, it will be saved automatically until you clear your note again";
+			}
+
+			document.getElementById('note').innerHTML = note;
+
+		}
+
+		function saveNote(id){
+			var note = document.getElementById('note').innerHTML;
+			localStorage.setItem('note', note);
+		}
+
+		function clearNote(){
+			clear: localStorage.clear();
+			return false;
+		}
+
+	</script>
+</head>
+<body>
+	<header><h1>MyNoteApp</h1></header>
+	<section id="container">
+		<div id="note" contenteditable="true" onkeyup="saveNote()"></div>
+	</section>
+	<footer>
+		<div>
+			<a href="" onclick="javascript: clearNote()" class="clear">Clear note</a>
+		</div>
+		<p>&copy; .tcla MyNote example </p>
+	</footer>
+	<script type="text/javascript">
+		getNote();
+	</script>
+</body>
+</html>

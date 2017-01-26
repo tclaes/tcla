@@ -1,0 +1,66 @@
+/* CSS Document */
+
+body {
+	margin: 0px;
+	padding: 0px;
+	}
+	
+header a.logo {
+	display: block;
+	position: absolute;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	}
+	
+nav {
+	width: 66%;
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-color:#009999;
+	}
+	
+footer {
+	background: url(../img/halftone.png);
+	}
+
+header {
+	height: 55px;
+	
+	}
+	
+header a.logo {
+	width: 200px;
+	height: 55px;
+	top: 10px;
+	left: 0px;
+	background-image: url(../img/logo_large.png);
+	}
+	
+nav.main-nav {
+	top: 0px;
+	right: 0px;
+	}
+	
+nav.main-nav a {
+	padding: 20px 20px 20px 20px;
+	float: left;
+	border-left: 1px solid #009999;
+	}
+	
+nav.main-nav.stickytop {
+    position:fixed;
+    top:0px;
+	left: 0px;
+	width: 100%;
+}
+
+nav.main-nav .center {
+	width: 920px;
+	margin: 0px auto 0px auto;
+	}
+	
+@media screen and (max-width: 990px) {
+	footer {padding-left: 20px;}
+	}

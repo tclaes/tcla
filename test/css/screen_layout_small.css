@@ -1,0 +1,62 @@
+/* CSS Document */
+
+header {
+	height: 75px;
+	background: url(../img/banner_small.png) no-repeat right 0px;
+	}
+	
+header a.logo {
+	width: 105px;
+	height: 40px;
+	top: 16px;
+	right: 15px;
+	background-image: url(../img/tcla_small.png);
+	}
+	
+article {
+	padding: 20px 20px 10px 20px;
+	}
+	
+nav {
+	position: static;
+	padding: 10px 0px 10px 0px;
+	background-color: #EAEAEA;
+	}
+	
+nav a {
+	display: block;
+	margin: 15px;
+	padding: 9px;
+	border: 1px solid #333;
+	background: url(../img/mobile_link_arrow.png) no-repeat right center;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	}
+	
+nav a:hover {
+	color: white;
+	background-color: rgba(0,255,255,.15);
+	}
+	
+.promo_container {
+	padding: 0px;
+	}
+	
+.promo_container .promo {
+	width: auto;
+	float: none;
+	padding: 10px 0px 0px 0px;
+	background-position: 20px 13px;
+	border-top: 1px solid grey;
+	}
+	
+.promo_container .content {
+	padding: 0px 20px 5px 120px;
+	}
+	
+footer {
+	border-top: 1px solid grey;
+	}
+	
+body { background-image: none;}

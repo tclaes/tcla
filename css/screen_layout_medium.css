@@ -1,0 +1,13 @@
+/* CSS Document */
+
+nav.main-nav {
+	top: 55px;
+	left: 0px;
+	}
+
+@media screen and (max-width: 500px) {
+	nav.main-nav.stickytop{
+		position: relative;
+		}
+}
+
