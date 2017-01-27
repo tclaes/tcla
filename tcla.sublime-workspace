@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"li",
+				"list-unstyled"
+			],
+			[
+				"nav",
+				"navigation"
+			],
+			[
 				"bak",
 				"background-color"
 			],
@@ -52,37 +60,32 @@
 	"buffers":
 	[
 		{
-			"file": "index.htm",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 8502,
+				"buffer_size": 7760,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "sftp-config.json",
+			"file": "js/base.js",
 			"settings":
 			{
-				"buffer_size": 1375,
+				"buffer_size": 498,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": ".btn-primary{\n\tbackground:#DF0B05;\n\tborder-color:#DF0B05;\n}\n\n.btn-primary:hover {\n\tbackground: #570200;\n\tborder-color: #570200;\n}\n\n.btn-default:hover {\n\tbackground: #570200;\n\tborder-color: #570200;\n\tcolor:#fff ;\n}\n\n.jumbotron{\n\tbackground: #333 url('../img/bg_big.jpg') no-repeat center center;\n\tcolor:#fff;\n\ttext-align: center;\n\tborder-bottom: 5px #f4f4f4 solid;\n}\n\n.jumbotron-main{\n\tpadding: 0 60px 40px 60px;\n}\n\n.jumbotron-main h1{\n\tmargin-top:70px;\n\tmargin-bottom:30px;\n\tfont-size: 3em;\n}\n\n.jumbotron p.lead{\n\tfont-size:2.7em;\n\tmargin-bottom:50px;\n\tcolor: #DF0B05 ;\n\tfont-weight: bold;\n\ttext-shadow: 1px 1px 1px #570200;\n}\n\n.jumbotron-sub{\n\tpadding: 0 60px 40px 60px;\n}\n\n.navbar{\n\tmargin:0;\n\tcolor:#fff;\n\t/* background-color: #333333; */\n}\n\n.navbar a{\n\tcolor:#fff;\n\tmargin-bottom:3px;\n\tfont-weight: bold;\n}\n\n.navbar a:hover{\n\tbackground:none !important;\n\tborder-bottom:#DF0B05 3px solid;\n\tmargin-bottom:0;\n}\n\n.navbar-brand {\n\tfont-family: 'Roboto', 'sans-serif';\n\tfont-weight: bold;\n}\n\n.icon-bar {\n\tbackground-color: #fff;\n}\n\n.box {\n\ttext-align: center;\n}\n\n.box .glyphicon {\n\tfont-size: 40px;\n}\n\n.section-a {\n\tbackground: #570200;\n\tcolor: #fff;\n\ttext-align: center;\n\tpadding: 20px;\n\tmargin-bottom: 30px;\n}\n\n.section-a h1 {\n\tfont-size: 3em;\n}\n\n.img-full{\n\twidth: 100%;\n}\n\n.main-footer {\n\tbackground: #A20400;\n\tpadding: 30px;\n\tcolor: #fff;\n}\n\n.main-footer li a{\n\tcolor: white;\n}\n\n.main-footer ul {\n\tmargin-top: 20px;\n}",
 			"file": "css/style.css",
+			"file_size": 1418,
+			"file_write_time": 131299446050000000,
 			"settings":
 			{
-				"buffer_size": 1113,
+				"buffer_size": 1420,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "bootstrap/index.html",
-			"settings":
-			{
-				"buffer_size": 7708,
 				"line_ending": "Unix"
 			}
 		}
@@ -147,15 +150,15 @@
 	"expanded_folders":
 	[
 		"/Users/tomclaes/Documents/tcla",
-		"/Users/tomclaes/Documents/tcla/bootstrap/css",
-		"/Users/tomclaes/Documents/tcla/css",
-		"/Users/tomclaes/Documents/tcla/framework"
+		"/Users/tomclaes/Documents/tcla/sites",
+		"/Users/tomclaes/Documents/tcla/sites/default"
 	],
 	"file_history":
 	[
+		"/Users/tomclaes/Documents/tcla/sftp-config.json",
+		"/Users/tomclaes/Documents/tcla/bootstrap/index.html",
 		"/Users/tomclaes/Documents/tcla/css/base.css",
 		"/Users/tomclaes/Documents/tcla/bootstrap/css/style.css",
-		"/Users/tomclaes/Documents/tcla/sftp-config.json",
 		"/Users/tomclaes/Google Drive/tcla/site/index.php",
 		"/private/var/folders/t7/ls50t75d6k7gh85bwytm2n3h0000gn/T/fz3temp-2/gradient.pdf",
 		"/private/var/folders/t7/ls50t75d6k7gh85bwytm2n3h0000gn/T/fz3temp-2/logo.jpg",
@@ -217,121 +220,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.htm",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8502,
+						"buffer_size": 7760,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8127,
-								8127
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "sftp-config.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1375,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								868,
-								868
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1113,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								486,
-								486
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 51.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "bootstrap/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7708,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1815,
-								7488
+								5761,
+								5761
 							]
 						],
 						"settings":
@@ -344,10 +250,73 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1942.0,
+						"translation.y": 2080.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/base.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								122,
+								122
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								707,
+								707
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 422.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -394,7 +363,7 @@
 	},
 	"output.sftp":
 	{
-		"height": 228.0
+		"height": 117.0
 	},
 	"pinned_build_system": "",
 	"project": "tcla.sublime-project",
