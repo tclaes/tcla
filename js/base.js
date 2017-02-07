@@ -4,6 +4,7 @@
 
 var main = function(){
 	
+    /* Top Navigation bar */
 	$(window).scroll(function(){
 
         if ($(this).scrollTop() >= 60) {
@@ -17,6 +18,9 @@ var main = function(){
             console.log("terug boven");
         }
     });
+
+    /* anchor positioning */
+
 	
 }
 
