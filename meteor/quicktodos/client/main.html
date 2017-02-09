@@ -1,28 +1,30 @@
 <head>
-  <title>Quick Todos</title>
+  <title>Todo List</title>
 </head>
 
 <body>
   <div class="container">
-    {{> main}}
+    {{> todoList}}
   </div>
 
 
 </body>
 
-<template name="main">
-  <header>
-    <h1>{{title}}</h1>
-  </header>
+<template name="todoList">
+<h2>Add to do</h2>
+<form class="todoform">
+  <input type="text" name="name" placeholder="todoname">
+  <input type="text" name="time" placeholder="todotime">
+  <input type="submit" name="submit"><br>
+
+</form>
+  <h1>{{title}}</h1>
   <ul>
-    {{#each tasks}}
-      {{> task}}
+    {{#each todo in todos}}
+      <li>{{todo.name}} - {{todo.time}}</li>
     {{/each}}
   </ul>
     
 </template>
 
-<template name="task">
-  <li>{{text}}</li>
-</template>
 
