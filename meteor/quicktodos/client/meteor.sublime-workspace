@@ -1,0 +1,428 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"li",
+				"list-unstyled"
+			],
+			[
+				"nav",
+				"navigation"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"con",
+				"container"
+			],
+			[
+				"text-deceo",
+				"text-decoration-style"
+			],
+			[
+				"dec",
+				"text-decoration"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"get",
+				"getNote"
+			],
+			[
+				"onkey",
+				"onkeyup\tAttr"
+			],
+			[
+				"h",
+				"h1\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.js",
+			"settings":
+			{
+				"buffer_size": 621,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tomclaes/Documents/tcla/meteor/quicktodos/api/todos.js",
+			"settings":
+			{
+				"buffer_size": 88,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.html",
+			"settings":
+			{
+				"buffer_size": 492,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"Snippet: lor",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/tomclaes/Documents/tcla/meteor",
+		"/Users/tomclaes/Documents/tcla/meteor/quicktodos",
+		"/Users/tomclaes/Documents/tcla/meteor/quicktodos/.meteor",
+		"/Users/tomclaes/Documents/tcla/meteor/quicktodos/api",
+		"/Users/tomclaes/Documents/tcla/meteor/quicktodos/client",
+		"/Users/tomclaes/Documents/tcla/meteor/quicktodos/node_modules",
+		"/Users/tomclaes/Documents/tcla/meteor/quicktodos/server"
+	],
+	"file_history":
+	[
+		"/Users/tomclaes/Documents/tcla/meteor/quicktodos/server/main.js",
+		"/Users/tomclaes/Documents/tcla/quicktodos/api/todos.js",
+		"/Users/tomclaes/Documents/tcla/quicktodos/client/main.js",
+		"/Users/tomclaes/Documents/tcla/quicktodos/client/main.html",
+		"/Users/tomclaes/Documents/tcla/nodejs/index.html",
+		"/Users/tomclaes/Documents/tcla/nodejs/server.js",
+		"/Users/tomclaes/Documents/tcla/slider/jQuery Image Slider/css/style.css",
+		"/Users/tomclaes/Documents/tcla/template.html",
+		"/Users/tomclaes/Documents/tcla/slider.html",
+		"/Users/tomclaes/Documents/tcla/js/base.js",
+		"/Users/tomclaes/Documents/tcla/sftp-config.json",
+		"/Users/tomclaes/Documents/tcla/bootstrap/index.html",
+		"/Users/tomclaes/Documents/tcla/css/base.css",
+		"/Users/tomclaes/Documents/tcla/bootstrap/css/style.css",
+		"/Users/tomclaes/Google Drive/tcla/site/index.php",
+		"/private/var/folders/t7/ls50t75d6k7gh85bwytm2n3h0000gn/T/fz3temp-2/gradient.pdf",
+		"/private/var/folders/t7/ls50t75d6k7gh85bwytm2n3h0000gn/T/fz3temp-2/logo.jpg",
+		"/private/var/folders/t7/ls50t75d6k7gh85bwytm2n3h0000gn/T/fz3temp-2/readme.html",
+		"/private/var/folders/t7/ls50t75d6k7gh85bwytm2n3h0000gn/T/fz3temp-2/license.txt",
+		"/private/var/folders/t7/ls50t75d6k7gh85bwytm2n3h0000gn/T/fz3temp-2/part",
+		"/private/var/folders/t7/ls50t75d6k7gh85bwytm2n3h0000gn/T/fz3temp-2/index.html",
+		"/Users/tomclaes/Documents/fullstack/Bootstrap/index.html",
+		"/Users/tomclaes/Documents/fullstack/Bootstrap/about.html",
+		"/Users/tomclaes/Documents/fullstack/Bootstrap/contact.html",
+		"/Users/tomclaes/Documents/fullstack/Bootstrap/services.html",
+		"/Users/tomclaes/Documents/fullstack/Bootstrap/css/style.css",
+		"/Users/tomclaes/Documents/fullstack/Bootstrap/contact.htm",
+		"/Users/tomclaes/Documents/fullstack/Bootstrap/sftp-config.json",
+		"/Users/tomclaes/Library/Application Support/Sublime Text 3/Packages/User/sftp_servers/tcla",
+		"/Users/tomclaes/Documents/fullstack/Bootstrap/ftpsync.settings",
+		"/Users/tomclaes/Documents/fullstack/html5/html5_app/index.html",
+		"/Users/tomclaes/Library/Application Support/Sublime Text 3/Packages/FTPSync/FTPSync.sublime-settings",
+		"/Users/tomclaes/Library/Application Support/Sublime Text 3/Packages/User/FTPSync.sublime-settings",
+		"/Users/tomclaes/Google Drive/tcla/css/tcla.scss",
+		"/Users/tomclaes/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/tomclaes/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/tomclaes/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/tomclaes/Google Drive/tcla/public_html/test/index.php",
+		"/Users/tomclaes/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/tomclaes/Google Drive/App ontwikkelen/HalloWereld/www/config.xml",
+		"/Users/tomclaes/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								612,
+								612
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/tomclaes/Documents/tcla/meteor/quicktodos/api/todos.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 88,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "main.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								182,
+								182
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 117.0
+	},
+	"pinned_build_system": "",
+	"project": "meteor.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/fullstack/Bootstrap/bootstrap.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 184.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
