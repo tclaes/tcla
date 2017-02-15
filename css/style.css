@@ -107,3 +107,8 @@
 .main-footer ul {
 	margin-top: 20px;
 }
+
+      .creations {
+        height: 500px;
+        overflow: hidden;
+      }

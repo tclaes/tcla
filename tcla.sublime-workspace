@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"alig",
+				"align-content"
+			],
+			[
+				"border-col",
+				"border-color"
+			],
+			[
+				"text-de",
+				"text-decoration"
+			],
+			[
+				"spa",
+				"space-between"
+			],
+			[
+				"al",
+				"alt\tAttr"
+			],
+			[
 				"res",
 				"response.end"
 			],
@@ -68,23 +88,10 @@
 	"buffers":
 	[
 		{
-			"file": "nodejs/myexpress/app.js",
+			"file": "meteor/todos/client/main.html",
 			"settings":
 			{
-				"buffer_size": 524,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<h1>fuckersscanhp</h1>",
-			"file": "nodejs/myexpress/public/index.html",
-			"file_size": 16,
-			"file_write_time": 131306176980000000,
-			"settings":
-			{
-				"buffer_size": 22,
-				"encoding": "UTF-8",
+				"buffer_size": 711,
 				"line_ending": "Unix"
 			}
 		}
@@ -160,16 +167,26 @@
 	"expanded_folders":
 	[
 		"/Users/tomclaes/Documents/tcla",
-		"/Users/tomclaes/Documents/tcla/nodejs",
-		"/Users/tomclaes/Documents/tcla/nodejs/myexpress"
+		"/Users/tomclaes/Documents/tcla/angular",
+		"/Users/tomclaes/Documents/tcla/meteor",
+		"/Users/tomclaes/Documents/tcla/meteor/todos",
+		"/Users/tomclaes/Documents/tcla/meteor/todos/client"
 	],
 	"file_history":
 	[
+		"/Users/tomclaes/Documents/tcla/fullscreen/index.html",
+		"/Users/tomclaes/Documents/tcla/fullscreen/css/style.css",
+		"/Users/tomclaes/Documents/tcla/fullscreen/js/app.js",
+		"/Users/tomclaes/Documents/tcla/fullscreen/full-screen-slider/style.css",
+		"/Users/tomclaes/Documents/tcla/fullscreen/full-screen-slider/index.html",
+		"/Users/tomclaes/Documents/tcla/nodejs/myexpress/app.js",
 		"/Users/tomclaes/Documents/tcla/index.html",
+		"/Users/tomclaes/Documents/tcla/creations.html",
+		"/Users/tomclaes/Library/Application Support/Sublime Text 3/Packages/User/sftp_servers/tcla",
+		"/Users/tomclaes/Documents/tcla/nodejs/myexpress/public/index.html",
 		"/Users/tomclaes/Documents/tcla/css/style.css",
 		"/Users/tomclaes/Documents/tcla/slider/index.html",
 		"/Users/tomclaes/Documents/tcla/slider/css/style.css",
-		"/Users/tomclaes/Documents/tcla/nodejs/myexpress/app.js",
 		"/Users/tomclaes/Documents/tcla/slider/jQuery Image Slider/css/style.css",
 		"/Users/tomclaes/Documents/tcla/template.html",
 		"/Users/tomclaes/Documents/tcla/slider.html",
@@ -192,7 +209,6 @@
 		"/Users/tomclaes/Documents/fullstack/Bootstrap/css/style.css",
 		"/Users/tomclaes/Documents/fullstack/Bootstrap/contact.htm",
 		"/Users/tomclaes/Documents/fullstack/Bootstrap/sftp-config.json",
-		"/Users/tomclaes/Library/Application Support/Sublime Text 3/Packages/User/sftp_servers/tcla",
 		"/Users/tomclaes/Documents/fullstack/Bootstrap/ftpsync.settings",
 		"/Users/tomclaes/Documents/fullstack/html5/html5_app/index.html",
 		"/Users/tomclaes/Library/Application Support/Sublime Text 3/Packages/FTPSync/FTPSync.sublime-settings",
@@ -244,19 +260,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "nodejs/myexpress/app.js",
+					"file": "meteor/todos/client/main.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 524,
+						"buffer_size": 711,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								524,
-								524
+								0,
+								0
 							]
 						],
 						"settings":
@@ -264,42 +280,15 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "nodejs/myexpress/public/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 22,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								22,
-								22
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]

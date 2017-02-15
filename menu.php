@@ -1,25 +1,22 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>TCLA Menu Test</title>
-
-		<!-- CSS Files -->
-		<link rel="stylesheet" href="css/base.css" />
-
-	</head>
-
-	<body>
-			
-			<div class="con-right va-bottom bg-yellow">
-				<nav class="mnu container border-1">
-					<a class="mnu__link con-right" href="#">Home</a>
-					<a class="mnu__link con-right" href="http://www.mijnbaby.eu">Mijn Baby</a>
-					<a class="mnu__link con-right" href="http://www.louieclaes.be">Louie Claes</a>
-					<a class="mnu__link con-right" href="http://www.oneplustwo.be">OnePlus 2</a
-				</nav>
-			</div>
-		
-	</body>
-
-</html>
+<nav class="navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only" style="background-color:white;">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span style="color: #DF0B05">.</span>tcla</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.php">Home</a></li>
+            <li><a href="#services">Wie ben ik?</a></li>
+            <li><a href="#">Wat doe ik?</a></li>
+            <li><a href="creations.php">Wat heb ik gemaakt?</a></li>
+            <li><a href="contact.php">Contacteer me</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
