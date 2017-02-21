@@ -55,7 +55,7 @@
   <div class="section-a">
     <div class="row">
       <div class="col-md-12">
-        <h1>Kleine projecten troef</h1>
+        <h1>Kleine projecten troeffire</h1>
         <p>Alleen is het bijna onmogelijk grote projecten tot een goed einde te brengen. Daarom wil ik met voorlopig richten tot kleine zelfstandigen die nood hebben aan een duidelijke webpagina</p>
         <p>Geen ingewikkelde cms maar een simpele site die de nodige informatie verschaft aan de bezoeker.</p>
       </div>
