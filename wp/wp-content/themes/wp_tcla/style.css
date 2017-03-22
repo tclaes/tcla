@@ -1,0 +1,136 @@
+/*
+Theme Name: .tcla
+Theme URI: http://www.tcla.be
+Author: Tom Claes
+Author URI: https://tcla.be/
+Description: First .tcla theme	
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+.btn-primary{
+	background:#DF0B05;
+	border-color:#DF0B05;
+}
+
+.btn-primary:hover {
+	background: #570200;
+	border-color: #570200;
+}
+
+.btn-default:hover {
+	background: #570200;
+	border-color: #570200;
+	color:#fff ;
+}
+
+.jumbotron{
+	background: #333 url('img/bg_big.jpg') no-repeat center center;
+	color:#fff;
+	text-align: center;
+	border-bottom: 5px #f4f4f4 solid;
+}
+
+.jumbotron-main{
+	padding: 0 60px 40px 60px;
+}
+
+.jumbotron-main h1{
+	margin-top:70px;
+	margin-bottom:30px;
+	font-size: 3em;
+}
+
+.jumbotron p.lead{
+	font-size:2.7em;
+	margin-bottom:50px;
+	color: #DF0B05 ;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #570200;
+}
+
+.jumbotron-sub{
+	padding: 0 60px 40px 60px;
+}
+
+.navbar{
+	margin:0;
+	color:#fff;
+	/* background-color: #333333; */
+}
+
+.navbar a{
+	color:#fff;
+	margin-bottom:3px;
+	font-weight: bold;
+}
+
+.navbar a:hover{
+	background:none !important;
+	border-bottom:#DF0B05 3px solid;
+	margin-bottom:0;
+}
+
+.navbar-brand {
+	font-family: 'Roboto', 'sans-serif';
+	font-weight: bold;
+}
+
+.icon-bar {
+	background-color: #fff;
+}
+
+.box {
+	text-align: center;
+}
+
+.box .glyphicon {
+	font-size: 40px;
+}
+
+.section-a {
+	background: #570200;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.section-a h1 {
+	font-size: 3em;
+}
+
+.img-full{
+	width: 100%;
+}
+
+.main-footer {
+	background: #A20400;
+	padding: 30px;
+	color: #fff;
+}
+
+.main-footer li a{
+	color: white;
+}
+
+.main-footer ul {
+	margin-top: 20px;
+}
+
+      .creations {
+        height: 500px;
+        overflow: hidden;
+      }
+
+.box .fa {
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
+.post-thumb img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+}
