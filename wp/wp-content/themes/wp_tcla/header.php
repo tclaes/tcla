@@ -28,8 +28,7 @@
 
   </head>
 
-  <body>
-
+	<body>		
 
 	<div class="jumbotron jumbotron-main">
 		<nav class="navbar" role="navigation">
@@ -61,8 +60,8 @@
     </nav>		
 
     <div class="container">
-      <h1><span style="color: #DF0B05">.</span><?php bloginfo('name'); ?></h1>
-      <p class="lead"><?php bloginfo('description'); ?></p>
-      <p><a class="btn btn-primary" href="#">Lees meer...</a> <a class="btn btn-default" href="#">Contacteer me</a></p>
+      <!--<h1><span style="color: #DF0B05">.</span><?php bloginfo('name'); ?></h1>-->
+      <p class="lead"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+</p>
     </div>
   </div>
