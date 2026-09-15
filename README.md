@@ -14,11 +14,11 @@ Alle inhoud (profiel, jobs, projecten, skills) staat centraal in `src/data/profi
 
 ## Commands
 
-| Command        | Actie                          |
-| :------------- | :----------------------------- |
-| `npm run dev`  | Dev-server op `localhost:4321` |
-| `npm run build`| Build naar `./dist/`           |
-| `npm run preview` | Preview de build lokaal     |
+| Command           | Actie                          |
+| :---------------- | :----------------------------- |
+| `npm run dev`     | Dev-server op `localhost:4321` |
+| `npm run build`   | Build naar `./dist/`           |
+| `npm run preview` | Preview de build lokaal        |
 
 ## Deploy (Vercel)
 

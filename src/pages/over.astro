@@ -1,17 +1,32 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { profile, aboutParagraphs, skillGroups, education, certifications } from '../data/profile';
+import {
+  profile,
+  aboutParagraphs,
+  skillGroups,
+  education,
+  certifications,
+} from '../data/profile';
 ---
 
-<BaseLayout title="Over" description={`Over ${profile.name} — ${profile.subline}.`}>
+<BaseLayout
+  title="Over"
+  description={`Over ${profile.name} — ${profile.subline}.`}
+>
   <!-- Page header -->
   <section class="page-head">
     <div class="container">
-      <p class="mono-label"><span class="index">02</span>Over</p>
-      <h1 class="serif-display page-title">Ik maak interface-architectuur<br />die jaren meegaat.</h1>
+      <p class="mono-label">
+        <span class="index">02</span>Over
+      </p>
+      <h1 class="serif-display page-title">
+        Ik maak interface-architectuur
+        <br />
+        die jaren meegaat.
+      </h1>
       <p class="lede page-lede">
-        Solution Engineer met een diepe focus op frontend, UI/UX en accessibility — en een blik
-        die verder reikt dan het visuele.
+        Solution Engineer met een diepe focus op frontend, UI/UX en
+        accessibility — en een blik die verder reikt dan het visuele.
       </p>
     </div>
   </section>
@@ -19,7 +34,9 @@ import { profile, aboutParagraphs, skillGroups, education, certifications } from
   <!-- Bio -->
   <section class="section">
     <div class="container bio-grid">
-      <p class="mono-label bio-kicker"><span class="index">—</span>Wie ik ben</p>
+      <p class="mono-label bio-kicker">
+        <span class="index">—</span>Wie ik ben
+      </p>
       <div class="bio-body">
         {aboutParagraphs.map((p) => (
           <p class="bio-paragraph">{p}</p>
@@ -39,7 +56,9 @@ import { profile, aboutParagraphs, skillGroups, education, certifications } from
         {skillGroups.map((group, i) => (
           <div class="skill-group">
             <h3 class="skill-title">
-              <span class="mono-label"><span class="index">{String(i + 1).padStart(2, '0')}</span></span>
+              <span class="mono-label">
+                <span class="index">{String(i + 1).padStart(2, '0')}</span>
+              </span>
               {group.title}
             </h3>
             <ul class="skill-list">
@@ -57,7 +76,9 @@ import { profile, aboutParagraphs, skillGroups, education, certifications } from
   <section class="section">
     <div class="container two-col">
       <div>
-        <p class="mono-label section-kicker"><span class="index">01</span>Opleiding</p>
+        <p class="mono-label section-kicker">
+          <span class="index">01</span>Opleiding
+        </p>
         <ul class="edu-list">
           {education.map((item) => (
             <li class="edu-item">
@@ -71,7 +92,9 @@ import { profile, aboutParagraphs, skillGroups, education, certifications } from
         </ul>
       </div>
       <div>
-        <p class="mono-label section-kicker"><span class="index">02</span>Certificeringen</p>
+        <p class="mono-label section-kicker">
+          <span class="index">02</span>Certificeringen
+        </p>
         <ul class="cert-list">
           {certifications.map((cert) => (
             <li class="cert-item">
@@ -88,10 +111,14 @@ import { profile, aboutParagraphs, skillGroups, education, certifications } from
   <section class="cta">
     <div class="container cta-inner">
       <p class="pull cta-text">
-        Op dit moment ben ik te vinden voor een nieuwe opdracht — hybride of op afstand.
+        Op dit moment ben ik te vinden voor een nieuwe opdracht — hybride of op
+        afstand.
       </p>
       <a class="btn btn-accent" href="/contact">
-        Neem contact op <span class="arrow" aria-hidden="true">→</span>
+        Neem contact op{' '}
+        <span class="arrow" aria-hidden="true">
+          →
+        </span>
       </a>
     </div>
   </section>

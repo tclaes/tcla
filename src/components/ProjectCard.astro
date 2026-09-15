@@ -24,17 +24,25 @@ const linkAttrs = isLink
 <article class:list={['project', { featured: project.featured }]}>
   <Tag class:list={['project-link', { 'is-link': isLink }]} {...linkAttrs}>
     <div class="project-top">
-      <span class="mono-label project-num">{num} <span class="project-slash">/ {total}</span></span>
+      <span class="mono-label project-num">
+        {num} <span class="project-slash">/ {total}</span>
+      </span>
       <span class="mono-label project-period">{project.period}</span>
     </div>
     <h3 class="project-title">
       {project.title}
-      {isLink && <span class="project-arrow" aria-hidden="true">→</span>}
+      {isLink && (
+        <span class="project-arrow" aria-hidden="true">
+          →
+        </span>
+      )}
     </h3>
     <p class="project-client mono-label">{project.client}</p>
     <p class="project-desc">{project.description}</p>
     <ul class="project-tags">
-      {project.tags.map((tag) => <li class="project-tag">{tag}</li>)}
+      {project.tags.map((tag) => (
+        <li class="project-tag">{tag}</li>
+      ))}
     </ul>
   </Tag>
 </article>
@@ -101,7 +109,9 @@ const linkAttrs = isLink
     color: var(--accent);
     opacity: 0;
     transform: translateX(-4px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
   }
 
   .project-link.is-link:hover .project-arrow {
@@ -132,7 +142,7 @@ const linkAttrs = isLink
   }
 
   .project-tag {
-    font-family: var(--mono),serif;
+    font-family: var(--mono), serif;
     font-size: 0.66rem;
     letter-spacing: 0.05em;
     color: var(--muted);

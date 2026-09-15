@@ -11,7 +11,9 @@
   --accent-ink: #10130a;
 
   --serif: 'Space Grotesk Variable', 'Space Grotesk', system-ui, sans-serif;
-  --sans: 'Space Grotesk Variable', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --sans:
+    'Space Grotesk Variable', 'Space Grotesk', system-ui, -apple-system,
+    sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
 
   --maxw: 76rem;

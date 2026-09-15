@@ -9,15 +9,24 @@ const contactRows = [
 ];
 ---
 
-<BaseLayout title="Contact" description={`Neem contact op met ${profile.name}.`}>
+<BaseLayout
+  title="Contact"
+  description={`Neem contact op met ${profile.name}.`}
+>
   <!-- Page header -->
   <section class="page-head">
     <div class="container">
-      <p class="mono-label"><span class="index">05</span>Contact</p>
-      <h1 class="serif-display page-title">Laten we<br />kennismaken.</h1>
+      <p class="mono-label">
+        <span class="index">05</span>Contact
+      </p>
+      <h1 class="serif-display page-title">
+        Laten we
+        <br />
+        kennismaken.
+      </h1>
       <p class="lede page-lede">
-        Een nieuwe opdracht, een design system-vraagstuk of gewoon een goed gesprek over frontend
-        architectuur — mijn inbox staat open.
+        Een nieuwe opdracht, een design system-vraagstuk of gewoon een goed
+        gesprek over frontend architectuur — mijn inbox staat open.
       </p>
     </div>
   </section>
@@ -27,12 +36,15 @@ const contactRows = [
     <div class="container contact-grid">
       <div class="contact-main">
         <p class="contact-intro">
-          Momenteel beschikbaar voor een nieuwe opdracht — hybride of volledig op afstand,
-          in de regio Limburg / Hasselt en daarbuiten. Wil je weten of ik bij je team pas?
-          Stuur een bericht, ik reageer snel.
+          Momenteel beschikbaar voor een nieuwe opdracht — hybride of volledig
+          op afstand, in de regio Limburg / Hasselt en daarbuiten. Wil je weten
+          of ik bij je team pas? Stuur een bericht, ik reageer snel.
         </p>
         <a class="btn btn-accent contact-cta" href={`mailto:${profile.email}`}>
-          Stuur een email <span class="arrow" aria-hidden="true">→</span>
+          Stuur een email{' '}
+          <span class="arrow" aria-hidden="true">
+            →
+          </span>
         </a>
       </div>
 
@@ -42,7 +54,15 @@ const contactRows = [
             <dt class="mono-label contact-label">{row.label}</dt>
             {row.href ? (
               <dd class="contact-value">
-                <a href={row.href} target={row.href.startsWith('mailto') || row.href.startsWith('tel') ? undefined : '_blank'} rel={row.href.startsWith('http') ? 'noopener' : undefined}>
+                <a
+                  href={row.href}
+                  target={
+                    row.href.startsWith('mailto') || row.href.startsWith('tel')
+                      ? undefined
+                      : '_blank'
+                  }
+                  rel={row.href.startsWith('http') ? 'noopener' : undefined}
+                >
                   {row.value}
                 </a>
               </dd>

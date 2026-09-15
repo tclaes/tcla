@@ -7,7 +7,8 @@ export const profile = {
   email: 'tom.claes82@gmail.com',
   linkedin: 'https://www.linkedin.com/in/tclaes/',
   linkedinHandle: 'linkedin.com/in/tclaes',
-  availability: 'Beschikbaar · hybride of op afstand · Limburg / Hasselt en regio',
+  availability:
+    'Beschikbaar · hybride of op afstand · Limburg / Hasselt en regio',
   hero: 'Ik vertaal complexe noden naar heldere, performante interfaces — en neem de architectuur eromheen mee.',
 };
 
@@ -50,15 +51,35 @@ export const skillGroups = [
   },
   {
     title: 'Testen & Kwaliteit',
-    skills: ['Jest', 'Cypress', 'Vitest', 'Playwright', 'Accessibility (WCAG)', 'Code reviews'],
+    skills: [
+      'Jest',
+      'Cypress',
+      'Vitest',
+      'Playwright',
+      'Accessibility (WCAG)',
+      'Code reviews',
+    ],
   },
   {
     title: 'Backend & Data',
-    skills: ['SQL', 'REST & GraphQL', 'Node.js', 'Spring Boot (basis)', 'Drupal integration'],
+    skills: [
+      'SQL',
+      'REST & GraphQL',
+      'Node.js',
+      'Spring Boot (basis)',
+      'Drupal integration',
+    ],
   },
   {
     title: 'Cloud & DevOps',
-    skills: ['Azure DevOps', 'AWS (Cloud Practitioner)', 'CI/CD', 'Netlify', 'Supabase', 'Docker (basis)'],
+    skills: [
+      'Azure DevOps',
+      'AWS (Cloud Practitioner)',
+      'CI/CD',
+      'Netlify',
+      'Supabase',
+      'Docker (basis)',
+    ],
   },
   {
     title: 'AI-assisted development',
@@ -88,7 +109,15 @@ export const jobs: Job[] = [
       'Leiden van frontend-architectuurbeslissingen, incl. state management en performance-optimalisatie.',
       'Kwaliteitsborging via code reviews en geautomatiseerd testen (Jest, Cypress, Storybook).',
     ],
-    tags: ['Angular', 'TypeScript', 'RxJS', 'Nx Monorepo', 'Jest', 'Cypress', 'Agile'],
+    tags: [
+      'Angular',
+      'TypeScript',
+      'RxJS',
+      'Nx Monorepo',
+      'Jest',
+      'Cypress',
+      'Agile',
+    ],
   },
   {
     role: 'Front End Engineer',
@@ -116,10 +145,26 @@ export const jobs: Job[] = [
 ];
 
 export const earlierExperience = [
-  { role: 'Technical Support Engineer', company: 'Visuatech', period: 'sep 2015 – feb 2017' },
-  { role: 'Commercial Employee', company: 'Arcoom bvba', period: 'jul 2012 – dec 2014' },
-  { role: 'Sales / Technician / Marketing', company: 'Xedos bvba', period: 'jan 2008 – feb 2011' },
-  { role: 'Technical Support Engineer', company: 'IPG GROUP', period: 'sep 2006 – dec 2007' },
+  {
+    role: 'Technical Support Engineer',
+    company: 'Visuatech',
+    period: 'sep 2015 – feb 2017',
+  },
+  {
+    role: 'Commercial Employee',
+    company: 'Arcoom bvba',
+    period: 'jul 2012 – dec 2014',
+  },
+  {
+    role: 'Sales / Technician / Marketing',
+    company: 'Xedos bvba',
+    period: 'jan 2008 – feb 2011',
+  },
+  {
+    role: 'Technical Support Engineer',
+    company: 'IPG GROUP',
+    period: 'sep 2006 – dec 2007',
+  },
 ];
 
 export type Project = {
@@ -148,7 +193,14 @@ export const projects: Project[] = [
     period: 'aug 2021 – dec 2025',
     description:
       'Migratie van SAP Spartacus naar SAP Composable Storefront met behoud van volledige functionaliteit. Leidde het UI-redesign en zette een robuuste frontend-tooling op (Nx, Storybook, Cypress).',
-    tags: ['Angular', 'NgRx', 'Web Components', 'Nx Monorepo', 'Cypress', 'SAP'],
+    tags: [
+      'Angular',
+      'NgRx',
+      'Web Components',
+      'Nx Monorepo',
+      'Cypress',
+      'SAP',
+    ],
     featured: true,
   },
   {
@@ -197,7 +249,8 @@ export const projects: Project[] = [
     title: 'a11y Check',
     client: 'Persoonlijk project',
     period: 'lopend',
-    description: 'Web accessibility checker powered by axe-core — audit elke website op WCAG 2.1 AA-compliancy.',
+    description:
+      'Web accessibility checker powered by axe-core — audit elke website op WCAG 2.1 AA-compliancy.',
     tags: ['Web Components', 'Claude', 'Netlify', 'Accessibility'],
     url: 'https://a11y-check.eu/',
   },
@@ -205,7 +258,8 @@ export const projects: Project[] = [
     title: 'Twan Claes',
     client: 'Persoonlijk project',
     period: 'nov 2020 – heden',
-    description: 'Persoonlijke website voor mijn zoon Twan — zijn verhaal, in het kort.',
+    description:
+      'Persoonlijke website voor mijn zoon Twan — zijn verhaal, in het kort.',
     tags: ['Vue.js', 'Prismic CMS', 'Netlify'],
     url: 'https://twanclaes.eu/',
   },

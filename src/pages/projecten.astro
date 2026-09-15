@@ -4,15 +4,24 @@ import ProjectCard from '../components/ProjectCard.astro';
 import { profile, projects } from '../data/profile';
 ---
 
-<BaseLayout title="Projecten" description={`Projecten van ${profile.name} — enterprise platforms, design systems en persoonlijke projecten.`}>
+<BaseLayout
+  title="Projecten"
+  description={`Projecten van ${profile.name} — enterprise platforms, design systems en persoonlijke projecten.`}
+>
   <!-- Page header -->
   <section class="page-head">
     <div class="container">
-      <p class="mono-label"><span class="index">04</span>Projecten</p>
-      <h1 class="serif-display page-title">Selectie uit<br />de afgelopen jaren.</h1>
+      <p class="mono-label">
+        <span class="index">04</span>Projecten
+      </p>
+      <h1 class="serif-display page-title">
+        Selectie uit
+        <br />
+        de afgelopen jaren.
+      </h1>
       <p class="lede page-lede">
-        Enterprise-platformen, design systems en eigen experimenten — elk met een helder doel
-        en meetbaar resultaat.
+        Enterprise-platformen, design systems en eigen experimenten — elk met
+        een helder doel en meetbaar resultaat.
       </p>
     </div>
   </section>
@@ -23,11 +32,16 @@ import { profile, projects } from '../data/profile';
       <h2 class="sr-only">Alle projecten</h2>
       <div class="project-grid">
         {projects.map((project, i) => (
-          <ProjectCard project={project} index={i + 1} total={projects.length} />
+          <ProjectCard
+            project={project}
+            index={i + 1}
+            total={projects.length}
+          />
         ))}
       </div>
       <p class="mono-label projects-footnote">
-        <span class="foot-note">※</span> Open-source en demo-projecten zijn aantoonbaar op aanvraag.
+        <span class="foot-note">※</span> Open-source en demo-projecten zijn
+        aantoonbaar op aanvraag.
       </p>
     </div>
   </section>
