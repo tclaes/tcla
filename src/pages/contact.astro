@@ -1,12 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { profile } from '../data/profile';
+import { profile } from '../data/site';
+import { getContactRows } from '../lib/contact';
 
-const contactRows = [
-  { label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
-  { label: 'LinkedIn', value: profile.linkedinHandle, href: profile.linkedin },
-  { label: 'Locatie', value: profile.location },
-];
+const contactRows = getContactRows(profile);
 ---
 
 <BaseLayout

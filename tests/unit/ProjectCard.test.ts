@@ -1,7 +1,7 @@
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
 import { describe, expect, test } from 'vitest';
 import ProjectCard from '../../src/components/ProjectCard.astro';
-import type { Project } from '../../src/data/profile';
+import type { Project } from '../../src/data/projects';
 
 // Component-test via de officiële Astro Container API:
 // https://docs.astro.build/en/guides/testing/#vitest-and-container-api
