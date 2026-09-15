@@ -7,7 +7,9 @@ const featured = projects.filter((p) => p.featured).slice(0, 3);
 const stack = profile.subline.split(' — ')[0];
 ---
 
-<BaseLayout description={`${profile.name} — ${profile.subline}. ${profile.hero}`}>
+<BaseLayout
+  description={`${profile.name} — ${profile.subline}. ${profile.hero}`}
+>
   <!-- Hero -->
   <section class="hero">
     <div class="container">
@@ -22,9 +24,14 @@ const stack = profile.subline.split(' — ')[0];
       <p class="pull hero-pull">{profile.hero}</p>
       <div class="hero-cta">
         <a class="btn btn-accent" href="/projecten">
-          Bekijk mijn werk <span class="arrow" aria-hidden="true">→</span>
+          Bekijk mijn werk{' '}
+          <span class="arrow" aria-hidden="true">
+            →
+          </span>
         </a>
-        <a class="btn" href="/over">Over mij</a>
+        <a class="btn" href="/over">
+          Over mij
+        </a>
       </div>
       <div class="hero-meta mono-label">
         <span>{profile.location}</span>
@@ -40,12 +47,19 @@ const stack = profile.subline.split(' — ')[0];
       <div class="section-head">
         <h2 class="section-title">Uitgelicht werk</h2>
         <a class="mono-label section-link" href="/projecten">
-          Alle projecten <span class="arrow" aria-hidden="true">→</span>
+          Alle projecten{' '}
+          <span class="arrow" aria-hidden="true">
+            →
+          </span>
         </a>
       </div>
       <div class="project-grid">
         {featured.map((project, i) => (
-          <ProjectCard project={project} index={i + 1} total={featured.length} />
+          <ProjectCard
+            project={project}
+            index={i + 1}
+            total={featured.length}
+          />
         ))}
       </div>
     </div>
@@ -54,15 +68,20 @@ const stack = profile.subline.split(' — ')[0];
   <!-- About teaser -->
   <section class="section about-teaser">
     <div class="container about-grid">
-      <p class="mono-label about-kicker"><span class="index">02</span>Over</p>
+      <p class="mono-label about-kicker">
+        <span class="index">02</span>Over
+      </p>
       <div class="about-body">
         <p class="pull">
-          Ik vertaal complexe noden naar heldere interfaces en neem de architectuur eromheen mee
-          — van design system tot deployment.
+          Ik vertaal complexe noden naar heldere interfaces en neem de
+          architectuur eromheen mee — van design system tot deployment.
         </p>
         <div class="about-cta">
           <a class="btn" href="/over">
-            Lees meer <span class="arrow" aria-hidden="true">→</span>
+            Lees meer{' '}
+            <span class="arrow" aria-hidden="true">
+              →
+            </span>
           </a>
         </div>
       </div>
@@ -72,12 +91,19 @@ const stack = profile.subline.split(' — ')[0];
   <!-- Contact CTA -->
   <section class="cta">
     <div class="container cta-inner">
-      <h2 class="serif-display cta-title">Samen iets <em>beschaalbars</em> bouwen?</h2>
+      <h2 class="serif-display cta-title">
+        Samen iets <em>beschaalbars</em> bouwen?
+      </h2>
       <div class="cta-actions">
         <a class="btn btn-accent" href="/contact">
-          Neem contact op <span class="arrow" aria-hidden="true">→</span>
+          Neem contact op{' '}
+          <span class="arrow" aria-hidden="true">
+            →
+          </span>
         </a>
-        <a class="btn" href={`mailto:${profile.email}`}>{profile.email}</a>
+        <a class="btn" href={`mailto:${profile.email}`}>
+          {profile.email}
+        </a>
       </div>
     </div>
   </section>

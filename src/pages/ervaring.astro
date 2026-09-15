@@ -3,14 +3,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { profile, jobs, earlierExperience } from '../data/profile';
 ---
 
-<BaseLayout title="Ervaring" description={`Ervaring van ${profile.name} — van enterprise design systems tot moderne Angular-architecturen.`}>
+<BaseLayout
+  title="Ervaring"
+  description={`Ervaring van ${profile.name} — van enterprise design systems tot moderne Angular-architecturen.`}
+>
   <!-- Page header -->
   <section class="page-head">
     <div class="container">
-      <p class="mono-label"><span class="index">03</span>Ervaring</p>
-      <h1 class="serif-display page-title">Van legacy-platform<br />tot design system.</h1>
+      <p class="mono-label">
+        <span class="index">03</span>Ervaring
+      </p>
+      <h1 class="serif-display page-title">
+        Van legacy-platform
+        <br />
+        tot design system.
+      </h1>
       <p class="lede page-lede">
-        Ruim acht jaar enterprise-webontwikkeling — van QNH Consulting over Cegeka tot we+ Benelux.
+        Ruim acht jaar enterprise-webontwikkeling — van QNH Consulting over
+        Cegeka tot we+ Benelux.
       </p>
     </div>
   </section>
@@ -22,17 +32,19 @@ import { profile, jobs, earlierExperience } from '../data/profile';
         {jobs.map((job, i) => (
           <article class="job">
             <div class="job-side">
-              <span class="mono-label job-index">{String(i + 1).padStart(2, '0')}</span>
+              <span class="mono-label job-index">
+                {String(i + 1).padStart(2, '0')}
+              </span>
               <span class="job-rule" aria-hidden="true"></span>
             </div>
             <div class="job-body">
               <div class="job-head">
-                <h2 class="serif-display job-title">
-                  {job.company}
-                </h2>
+                <h2 class="serif-display job-title">{job.company}</h2>
                 <span class="mono-label job-period">{job.period}</span>
               </div>
-              <p class="mono-label job-role">{job.role} · <span class="job-location">{job.location}</span></p>
+              <p class="mono-label job-role">
+                {job.role} · <span class="job-location">{job.location}</span>
+              </p>
               <ul class="job-bullets">
                 {job.bullets.map((bullet) => (
                   <li class="job-bullet">{bullet}</li>
@@ -61,7 +73,9 @@ import { profile, jobs, earlierExperience } from '../data/profile';
           <li class="early-item">
             <span class="early-role">
               {item.role}
-              <span class="early-sep" aria-hidden="true">·</span>
+              <span class="early-sep" aria-hidden="true">
+                ·
+              </span>
               {item.company}
             </span>
             <span class="early-period mono-label">{item.period}</span>

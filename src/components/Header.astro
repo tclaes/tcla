@@ -10,7 +10,8 @@ const nav = [
 ];
 
 const path = Astro.url.pathname;
-const active = (href: string) => (href === '/' ? path === '/' : path.startsWith(href)) ?? false;
+const active = (href: string) =>
+  (href === '/' ? path === '/' : path.startsWith(href)) ?? false;
 ---
 
 <header class="site-header">
@@ -20,18 +21,16 @@ const active = (href: string) => (href === '/' ? path === '/' : path.startsWith(
       <span class="brand-name">{profile.name}</span>
     </a>
     <nav class="nav" aria-label="Hoofdnavigatie">
-      {
-        nav.map((item) => (
-          <a
-            href={item.href}
-            class:list={['nav-link', { active: active(item.href) }]}
-            aria-current={active(item.href) ? 'page' : undefined}
-          >
-            <span class="nav-index">{item.index}</span>
-            {item.label}
-          </a>
-        ))
-      }
+      {nav.map((item) => (
+        <a
+          href={item.href}
+          class:list={['nav-link', { active: active(item.href) }]}
+          aria-current={active(item.href) ? 'page' : undefined}
+        >
+          <span class="nav-index">{item.index}</span>
+          {item.label}
+        </a>
+      ))}
     </nav>
   </div>
 </header>
@@ -97,7 +96,9 @@ const active = (href: string) => (href === '/' ? path === '/' : path.startsWith(
     color: var(--muted);
     padding: 0.35rem 0.5rem;
     border-radius: 999px;
-    transition: color 0.2s ease, background 0.2s ease;
+    transition:
+      color 0.2s ease,
+      background 0.2s ease;
   }
 
   .nav-index {

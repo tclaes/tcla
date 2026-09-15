@@ -8,11 +8,23 @@ const year = new Date().getFullYear();
   <div class="container">
     <div class="rule"></div>
     <div class="footer-grid">
-      <div class="mono-label">© {year} {profile.name}</div>
+      <div class="mono-label">
+        © {year} {profile.name}
+      </div>
       <div class="footer-links">
-        <a class="mono-label footer-link" href={`mailto:${profile.email}`}>Email</a>
+        <a class="mono-label footer-link" href={`mailto:${profile.email}`}>
+          Email
+        </a>
         <span class="footer-sep" aria-hidden="true"></span>
-        <a class="mono-label footer-link" href={profile.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn (opent in nieuw tabblad)">LinkedIn</a>
+        <a
+          class="mono-label footer-link"
+          href={profile.linkedin}
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn (opent in nieuw tabblad)"
+        >
+          LinkedIn
+        </a>
         <span class="footer-sep" aria-hidden="true"></span>
         <span class="mono-label">{profile.location}</span>
       </div>

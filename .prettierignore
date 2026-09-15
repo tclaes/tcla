@@ -1,0 +1,10 @@
+dist/
+.astro/
+node_modules/
+.claude/
+public/
+og/
+tools/
+package-lock.json
+.env
+.env.local
