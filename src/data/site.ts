@@ -22,6 +22,6 @@ export const profile: Profile = {
   linkedin: 'https://www.linkedin.com/in/tclaes/',
   linkedinHandle: 'linkedin.com/in/tclaes',
   availability:
-    'Beschikbaar · hybride of op afstand · Limburg / Hasselt en regio',
+    'Beschikbaar · hybride of op afstand · regio Limburg / Hasselt',
   hero: 'Ik vertaal complexe noden naar heldere, performante interfaces — en neem de architectuur eromheen mee.',
 };
