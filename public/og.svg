@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b0c0e"/>
+  <text x="120" y="220" font-family="Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="170" fill="#f5f3ef">Tom Claes</text>
+  <text x="124" y="330" font-family="Helvetica Neue, Arial, sans-serif" font-weight="400" font-size="54" fill="#9aa0a8">Front-end developer</text>
+  <rect x="120" y="470" width="960" height="12" rx="3" fill="#c8f95b"/>
+  <text x="120" y="580" font-family="Helvetica Neue, Arial, sans-serif" font-weight="400" font-size="34" fill="#6d737c">Portfolio · Astro</text>
+</svg>

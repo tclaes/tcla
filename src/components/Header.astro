@@ -22,7 +22,11 @@ const active = (href: string) => (href === '/' ? path === '/' : path.startsWith(
     <nav class="nav" aria-label="Hoofdnavigatie">
       {
         nav.map((item) => (
-          <a href={item.href} class:list={['nav-link', { active: active(item.href) }]}>
+          <a
+            href={item.href}
+            class:list={['nav-link', { active: active(item.href) }]}
+            aria-current={active(item.href) ? 'page' : undefined}
+          >
             <span class="nav-index">{item.index}</span>
             {item.label}
           </a>
@@ -112,5 +116,27 @@ const active = (href: string) => (href === '/' ? path === '/' : path.startsWith(
 
   .nav-link.active .nav-index {
     color: var(--accent);
+  }
+
+  @media (max-width: 48rem) {
+    .header-inner {
+      flex-direction: column;
+      gap: 0.75rem;
+      padding-block: 0.9rem 0.85rem;
+    }
+
+    .nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.25rem 0.45rem;
+    }
+
+    .nav-index {
+      display: none;
+    }
+
+    .nav-link {
+      padding: 0.3rem 0.6rem;
+    }
   }
 </style>

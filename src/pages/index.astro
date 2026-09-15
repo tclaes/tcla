@@ -4,6 +4,7 @@ import ProjectCard from '../components/ProjectCard.astro';
 import { profile, projects } from '../data/profile';
 
 const featured = projects.filter((p) => p.featured).slice(0, 3);
+const stack = profile.subline.split(' — ')[0];
 ---
 
 <BaseLayout description={`${profile.name} — ${profile.subline}. ${profile.hero}`}>
@@ -28,9 +29,7 @@ const featured = projects.filter((p) => p.featured).slice(0, 3);
       <div class="hero-meta mono-label">
         <span>{profile.location}</span>
         <span class="hero-dot" aria-hidden="true"></span>
-        <span>Angular · TypeScript · Svelte</span>
-        <span class="hero-dot" aria-hidden="true"></span>
-        <span>Beschikbaar voor nieuwe opdracht</span>
+        <span>{stack}</span>
       </div>
     </div>
   </section>
