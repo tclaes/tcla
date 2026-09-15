@@ -1,0 +1,284 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { profile, aboutParagraphs, skillGroups, education, certifications } from '../data/profile';
+---
+
+<BaseLayout title="Over" description={`Over ${profile.name} — ${profile.subline}.`}>
+  <!-- Page header -->
+  <section class="page-head">
+    <div class="container">
+      <p class="mono-label"><span class="index">02</span>Over</p>
+      <h1 class="serif-display page-title">Ik maak interface-architectuur<br />die jaren meegaat.</h1>
+      <p class="lede page-lede">
+        Solution Engineer met een diepe focus op frontend, UI/UX en accessibility — en een blik
+        die verder reikt dan het visuele.
+      </p>
+    </div>
+  </section>
+
+  <!-- Bio -->
+  <section class="section">
+    <div class="container bio-grid">
+      <p class="mono-label bio-kicker"><span class="index">—</span>Wie ik ben</p>
+      <div class="bio-body">
+        {aboutParagraphs.map((p) => (
+          <p class="bio-paragraph">{p}</p>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Skills</h2>
+        <span class="mono-label">vanuit jaren enterprise-ervaring</span>
+      </div>
+      <div class="skills-grid">
+        {skillGroups.map((group, i) => (
+          <div class="skill-group">
+            <h3 class="skill-title">
+              <span class="mono-label"><span class="index">{String(i + 1).padStart(2, '0')}</span></span>
+              {group.title}
+            </h3>
+            <ul class="skill-list">
+              {group.skills.map((skill) => (
+                <li class="skill-item">{skill}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & certifications -->
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <p class="mono-label section-kicker"><span class="index">01</span>Opleiding</p>
+        <ul class="edu-list">
+          {education.map((item) => (
+            <li class="edu-item">
+              <div class="edu-main">
+                <span class="edu-degree">{item.degree}</span>
+                <span class="edu-inst">{item.institution}</span>
+              </div>
+              <span class="edu-period mono-label">{item.period}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <p class="mono-label section-kicker"><span class="index">02</span>Certificeringen</p>
+        <ul class="cert-list">
+          {certifications.map((cert) => (
+            <li class="cert-item">
+              <span class="cert-check mono-label">✓</span>
+              <span>{cert}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Availability -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <p class="pull cta-text">
+        Op dit moment ben ik te vinden voor een nieuwe opdracht — hybride of op afstand.
+      </p>
+      <a class="btn btn-accent" href="/contact">
+        Neem contact op <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-head {
+    padding-block: clamp(5rem, 12vw, 9rem);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .page-title {
+    font-size: clamp(2.6rem, 7vw, 5.5rem);
+    color: var(--text-strong);
+    margin: 1.25rem 0 1.75rem;
+  }
+
+  .page-lede {
+    max-width: 46rem;
+  }
+
+  .bio-grid {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .bio-body {
+    max-width: 46rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.35rem;
+    font-size: 1.1rem;
+  }
+
+  .bio-paragraph {
+    color: var(--muted);
+  }
+
+  .bio-paragraph:first-of-type {
+    color: var(--text);
+    font-family: var(--serif);
+    font-size: clamp(1.3rem, 2.2vw, 1.55rem);
+    line-height: 1.5;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .skill-group {
+    background: var(--bg);
+    padding: 1.75rem;
+  }
+
+  .skill-title {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    color: var(--text-strong);
+    margin-bottom: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .skill-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .skill-item {
+    font-size: 0.95rem;
+    color: var(--muted);
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+
+  .skill-item::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--dim);
+    flex-shrink: 0;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .section-kicker {
+    margin-bottom: 2rem;
+  }
+
+  .edu-list,
+  .cert-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .edu-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.1rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .edu-item:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .edu-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .edu-degree {
+    color: var(--text-strong);
+    font-size: 1.02rem;
+  }
+
+  .edu-inst {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .edu-period {
+    color: var(--dim);
+    white-space: nowrap;
+  }
+
+  .cert-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding-block: 0.85rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  .cert-item:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .cert-check {
+    color: var(--accent);
+    margin-top: 0.1rem;
+  }
+
+  .cta {
+    padding-block: clamp(5rem, 11vw, 8rem);
+  }
+
+  .cta-text {
+    max-width: 34rem;
+    margin-bottom: 2.25rem;
+  }
+
+  @media (max-width: 54rem) {
+    .bio-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+    .two-col {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+</style>

@@ -1,0 +1,246 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { profile, jobs, earlierExperience } from '../data/profile';
+---
+
+<BaseLayout title="Ervaring" description={`Ervaring van ${profile.name} — van enterprise design systems tot moderne Angular-architecturen.`}>
+  <!-- Page header -->
+  <section class="page-head">
+    <div class="container">
+      <p class="mono-label"><span class="index">03</span>Ervaring</p>
+      <h1 class="serif-display page-title">Van legacy-platform<br />tot design system.</h1>
+      <p class="lede page-lede">
+        Ruim acht jaar enterprise-webontwikkeling — van QNH Consulting over Cegeka tot we+ Benelux.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experience timeline -->
+  <section class="section">
+    <div class="container">
+      <div class="timeline">
+        {jobs.map((job, i) => (
+          <article class="job">
+            <div class="job-side">
+              <span class="mono-label job-index">{String(i + 1).padStart(2, '0')}</span>
+              <span class="job-rule" aria-hidden="true"></span>
+            </div>
+            <div class="job-body">
+              <div class="job-head">
+                <h2 class="serif-display job-title">
+                  {job.company}
+                </h2>
+                <span class="mono-label job-period">{job.period}</span>
+              </div>
+              <p class="mono-label job-role">{job.role} · <span class="job-location">{job.location}</span></p>
+              <ul class="job-bullets">
+                {job.bullets.map((bullet) => (
+                  <li class="job-bullet">{bullet}</li>
+                ))}
+              </ul>
+              <ul class="job-tags">
+                {job.tags.map((tag) => (
+                  <li class="job-tag">{tag}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Earlier experience -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Eerdere ervaring</h2>
+      </div>
+      <ul class="early-list">
+        {earlierExperience.map((item) => (
+          <li class="early-item">
+            <span class="early-role">
+              {item.role}
+              <span class="early-sep" aria-hidden="true">·</span>
+              {item.company}
+            </span>
+            <span class="early-period mono-label">{item.period}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-head {
+    padding-block: clamp(5rem, 12vw, 9rem);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .page-title {
+    font-size: clamp(2.6rem, 7vw, 5.5rem);
+    color: var(--text-strong);
+    margin: 1.25rem 0 1.75rem;
+  }
+
+  .page-lede {
+    max-width: 46rem;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .job {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 2.25rem;
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .job + .job {
+    border-top: 1px solid var(--line);
+    padding-top: clamp(3rem, 6vw, 5rem);
+  }
+
+  .job-side {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+
+  .job-index {
+    color: var(--accent);
+  }
+
+  .job-rule {
+    width: 1px;
+    flex: 1;
+    min-height: 60px;
+    background: var(--line);
+  }
+
+  .job-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .job-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--text-strong);
+  }
+
+  .job-period {
+    color: var(--dim);
+    white-space: nowrap;
+  }
+
+  .job-role {
+    color: var(--muted);
+    margin-top: 0.35rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .job-location {
+    color: var(--dim);
+  }
+
+  .job-bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    max-width: 44rem;
+  }
+
+  .job-bullet {
+    color: var(--muted);
+    font-size: 1rem;
+    display: flex;
+    gap: 0.7rem;
+    align-items: baseline;
+  }
+
+  .job-bullet::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--dim);
+    flex-shrink: 0;
+  }
+
+  .job-tags {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .job-tag {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    border-radius: 999px;
+    padding: 0.25em 0.75em;
+  }
+
+  .early-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .early-item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .early-item:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .early-role {
+    color: var(--text);
+    font-size: 1.02rem;
+  }
+
+  .early-sep {
+    color: var(--dim);
+    margin-inline: 0.5em;
+  }
+
+  .early-period {
+    color: var(--dim);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 46rem) {
+    .job {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .job-rule {
+      display: none;
+    }
+    .job-index {
+      margin-bottom: 1.25rem;
+    }
+  }
+</style>

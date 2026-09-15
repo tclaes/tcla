@@ -1,0 +1,144 @@
+---
+import type { Project } from '../data/profile';
+
+interface Props {
+  project: Project;
+  index: number;
+  total: number;
+}
+
+const { project, index, total } = Astro.props;
+const num = String(index).padStart(2, '0');
+const isLink = !!project.url;
+const Tag = isLink ? 'a' : 'div';
+const linkAttrs = isLink
+  ? {
+      href: project.url,
+      target: '_blank',
+      rel: 'noopener',
+      'aria-label': `${project.title} — ${project.client} (opent in nieuw tabblad)`,
+    }
+  : {};
+---
+
+<article class:list={['project', { featured: project.featured }]}>
+  <Tag class:list={['project-link', { 'is-link': isLink }]} {...linkAttrs}>
+    <div class="project-top">
+      <span class="mono-label project-num">{num} <span class="project-slash">/ {total}</span></span>
+      <span class="mono-label project-period">{project.period}</span>
+    </div>
+    <h3 class="project-title">
+      {project.title}
+      {isLink && <span class="project-arrow" aria-hidden="true">→</span>}
+    </h3>
+    <p class="project-client mono-label">{project.client}</p>
+    <p class="project-desc">{project.description}</p>
+    <ul class="project-tags">
+      {project.tags.map((tag) => <li class="project-tag">{tag}</li>)}
+    </ul>
+  </Tag>
+</article>
+
+<style>
+  .project {
+    --pad: 1.6rem;
+    grid-column: span 1;
+  }
+
+  .project.featured {
+    border-color: var(--line-strong);
+  }
+
+  .project-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    height: 100%;
+    padding: var(--pad);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--bg-elev);
+    transition:
+      border-color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .project-link.is-link:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+  }
+
+  .project-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .project-num {
+    color: var(--accent);
+  }
+
+  .project-slash {
+    color: var(--dim);
+  }
+
+  .project-period {
+    color: var(--dim);
+  }
+
+  .project-title {
+    font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+    line-height: 1.15;
+    color: var(--text-strong);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .project-arrow {
+    color: var(--accent);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .project-link.is-link:hover .project-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .project-client {
+    color: var(--muted);
+  }
+
+  .project-desc {
+    font-size: 0.98rem;
+    color: var(--muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .project-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: auto;
+    margin-top: 0.4rem;
+    padding: 0;
+  }
+
+  .project-tag {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    padding: 0.25em 0.75em;
+  }
+</style>

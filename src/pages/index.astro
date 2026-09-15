@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { profile, projects } from '../data/profile';
+
+const featured = projects.filter((p) => p.featured).slice(0, 3);
+---
+
+<BaseLayout description={`${profile.name} — ${profile.subline}. ${profile.hero}`}>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <p class="mono-label hero-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        {profile.availability}
+      </p>
+      <h1 class="serif-display hero-title">
+        Front End Engineer
+        <span class="hero-amp">&amp;</span> Architect
+      </h1>
+      <p class="pull hero-pull">{profile.hero}</p>
+      <div class="hero-cta">
+        <a class="btn btn-accent" href="/projecten">
+          Bekijk mijn werk <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="btn" href="/over">Over mij</a>
+      </div>
+      <div class="hero-meta mono-label">
+        <span>{profile.location}</span>
+        <span class="hero-dot" aria-hidden="true"></span>
+        <span>Angular · TypeScript · Svelte</span>
+        <span class="hero-dot" aria-hidden="true"></span>
+        <span>Beschikbaar voor nieuwe opdracht</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured work -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Uitgelicht werk</h2>
+        <a class="mono-label section-link" href="/projecten">
+          Alle projecten <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="project-grid">
+        {featured.map((project, i) => (
+          <ProjectCard project={project} index={i + 1} total={featured.length} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About teaser -->
+  <section class="section about-teaser">
+    <div class="container about-grid">
+      <p class="mono-label about-kicker"><span class="index">02</span>Over</p>
+      <div class="about-body">
+        <p class="pull">
+          Ik vertaal complexe noden naar heldere interfaces en neem de architectuur eromheen mee
+          — van design system tot deployment.
+        </p>
+        <div class="about-cta">
+          <a class="btn" href="/over">
+            Lees meer <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <h2 class="serif-display cta-title">Samen iets <em>beschaalbars</em> bouwen?</h2>
+      <div class="cta-actions">
+        <a class="btn btn-accent" href="/contact">
+          Neem contact op <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="btn" href={`mailto:${profile.email}`}>{profile.email}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    min-height: 86vh;
+    display: flex;
+    align-items: center;
+    padding-block: clamp(4rem, 10vh, 7rem);
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 12vw, 8.5rem);
+    color: var(--text-strong);
+    margin: 1.25rem 0 1.75rem;
+  }
+
+  .hero-amp {
+    color: var(--accent);
+  }
+
+  .hero-status {
+    color: var(--text);
+  }
+
+  .hero-pull {
+    max-width: 44rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: clamp(3rem, 8vh, 5rem);
+    color: var(--dim);
+  }
+
+  .hero-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--dim);
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .section-link .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  .section-link:hover {
+    color: var(--accent);
+  }
+
+  .section-link:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .about-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 52rem;
+  }
+
+  .cta {
+    padding-block: clamp(6rem, 14vw, 11rem);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .cta-title {
+    font-size: clamp(2.6rem, 8vw, 6rem);
+    color: var(--text-strong);
+    max-width: 24ch;
+  }
+
+  .cta-title em {
+    color: var(--accent);
+  }
+
+  .cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 2.75rem;
+  }
+
+  @media (max-width: 54rem) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+</style>

@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { profile, projects } from '../data/profile';
+---
+
+<BaseLayout title="Projecten" description={`Projecten van ${profile.name} — enterprise platforms, design systems en persoonlijke projecten.`}>
+  <!-- Page header -->
+  <section class="page-head">
+    <div class="container">
+      <p class="mono-label"><span class="index">04</span>Projecten</p>
+      <h1 class="serif-display page-title">Selectie uit<br />de afgelopen jaren.</h1>
+      <p class="lede page-lede">
+        Enterprise-platformen, design systems en eigen experimenten — elk met een helder doel
+        en meetbaar resultaat.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section">
+    <div class="container">
+      <h2 class="sr-only">Alle projecten</h2>
+      <div class="project-grid">
+        {projects.map((project, i) => (
+          <ProjectCard project={project} index={i + 1} total={projects.length} />
+        ))}
+      </div>
+      <p class="mono-label projects-footnote">
+        <span class="foot-note">※</span> Open-source en demo-projecten zijn aantoonbaar op aanvraag.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .page-head {
+    padding-block: clamp(5rem, 12vw, 9rem);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .page-title {
+    font-size: clamp(2.6rem, 7vw, 5.5rem);
+    color: var(--text-strong);
+    margin: 1.25rem 0 1.75rem;
+  }
+
+  .page-lede {
+    max-width: 46rem;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .projects-footnote {
+    margin-top: 3rem;
+    color: var(--dim);
+  }
+
+  .foot-note {
+    color: var(--accent);
+    margin-right: 0.6em;
+  }
+
+  @media (max-width: 54rem) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

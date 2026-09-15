@@ -1,0 +1,59 @@
+---
+import { profile } from '../data/profile';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="rule"></div>
+    <div class="footer-grid">
+      <div class="mono-label">© {year} {profile.name}</div>
+      <div class="footer-links">
+        <a class="mono-label footer-link" href={`mailto:${profile.email}`}>Email</a>
+        <span class="footer-sep" aria-hidden="true"></span>
+        <a class="mono-label footer-link" href={profile.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+        <span class="footer-sep" aria-hidden="true"></span>
+        <span class="mono-label">{profile.location}</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding-block: 2.5rem;
+  }
+
+  .footer-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+  }
+
+  .footer-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-link {
+    color: var(--muted);
+    transition: color 0.2s ease;
+  }
+
+  .footer-link:hover {
+    color: var(--accent);
+  }
+
+  .footer-sep {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--dim);
+  }
+</style>

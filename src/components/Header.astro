@@ -1,0 +1,116 @@
+---
+import { profile } from '../data/profile';
+
+const nav = [
+  { href: '/', label: 'Home', index: '01' },
+  { href: '/over', label: 'Over', index: '02' },
+  { href: '/ervaring', label: 'Ervaring', index: '03' },
+  { href: '/projecten', label: 'Projecten', index: '04' },
+  { href: '/contact', label: 'Contact', index: '05' },
+];
+
+const path = Astro.url.pathname;
+const active = (href: string) => (href === '/' ? path === '/' : path.startsWith(href)) ?? false;
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label={`${profile.name} — home`}>
+      <span class="brand-mark">TC</span>
+      <span class="brand-name">{profile.name}</span>
+    </a>
+    <nav class="nav" aria-label="Hoofdnavigatie">
+      {
+        nav.map((item) => (
+          <a href={item.href} class:list={['nav-link', { active: active(item.href) }]}>
+            <span class="nav-index">{item.index}</span>
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgb(11 12 14 / 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 0.9rem;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  .brand-mark {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    color: var(--accent-ink);
+    background: var(--accent);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    letter-spacing: 0.02em;
+  }
+
+  .brand-name {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-strong);
+  }
+
+  .nav {
+    display: flex;
+    gap: clamp(0.25rem, 2vw, 1.5rem);
+  }
+
+  .nav-link {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0.35rem 0.5rem;
+    border-radius: 999px;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  .nav-index {
+    color: var(--dim);
+    margin-right: 0.4em;
+    font-weight: 400;
+  }
+
+  .nav-link:hover {
+    color: var(--text-strong);
+  }
+
+  .nav-link.active {
+    color: var(--accent);
+  }
+
+  .nav-link.active .nav-index {
+    color: var(--accent);
+  }
+</style>

@@ -1,0 +1,210 @@
+:root {
+  --bg: #0b0c0e;
+  --bg-elev: #101216;
+  --text: #e7e5e0;
+  --text-strong: #f6f4ef;
+  --muted: #9aa0a8;
+  --dim: #878d96;
+  --line: rgb(255 255 255 / 0.09);
+  --line-strong: rgb(255 255 255 / 0.16);
+  --accent: #c8f95b;
+  --accent-ink: #10130a;
+
+  --serif: 'Space Grotesk Variable', 'Space Grotesk', system-ui, sans-serif;
+  --sans: 'Space Grotesk Variable', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  --maxw: 76rem;
+  --pad: clamp(1.25rem, 5vw, 3rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+/* ---------- typography utilities ---------- */
+
+.mono-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.mono-label .index {
+  color: var(--accent);
+  margin-right: 0.6em;
+}
+
+.serif-display {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+}
+
+.lede {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  line-height: 1.35;
+  color: var(--text-strong);
+}
+
+.pull {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  line-height: 1.4;
+  color: var(--text-strong);
+}
+
+/* ---------- rules & spacing ---------- */
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  border: 0;
+  margin: 0;
+}
+
+.section {
+  padding-block: clamp(4.5rem, 10vw, 8rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--text-strong);
+}
+
+/* ---------- buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 0.8em 1.4em;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-strong);
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn:hover {
+  border-color: var(--accent);
+}
+
+.btn-accent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn-accent:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn .arrow {
+  transition: transform 0.2s ease;
+}
+
+.btn:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* ---------- accent dot ---------- */
+
+.status-dot {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 0.55em;
+  vertical-align: baseline;
+}
