@@ -1,17 +1,8 @@
 ---
-import { profile } from '../data/profile';
-
-const nav = [
-  { href: '/', label: 'Home', index: '01' },
-  { href: '/over', label: 'Over', index: '02' },
-  { href: '/ervaring', label: 'Ervaring', index: '03' },
-  { href: '/projecten', label: 'Projecten', index: '04' },
-  { href: '/contact', label: 'Contact', index: '05' },
-];
+import { profile } from '../data/site';
+import { navItems, isActivePath } from '../lib/nav';
 
 const path = Astro.url.pathname;
-const active = (href: string) =>
-  (href === '/' ? path === '/' : path.startsWith(href)) ?? false;
 ---
 
 <header class="site-header">
@@ -21,11 +12,11 @@ const active = (href: string) =>
       <span class="brand-name">{profile.name}</span>
     </a>
     <nav class="nav" aria-label="Hoofdnavigatie">
-      {nav.map((item) => (
+      {navItems.map((item) => (
         <a
           href={item.href}
-          class:list={['nav-link', { active: active(item.href) }]}
-          aria-current={active(item.href) ? 'page' : undefined}
+          class:list={['nav-link', { active: isActivePath(path, item.href) }]}
+          aria-current={isActivePath(path, item.href) ? 'page' : undefined}
         >
           <span class="nav-index">{item.index}</span>
           {item.label}
