@@ -21,7 +21,6 @@ export const profile: Profile = {
   email: 'tom.claes82@gmail.com',
   linkedin: 'https://www.linkedin.com/in/tclaes/',
   linkedinHandle: 'linkedin.com/in/tclaes',
-  availability:
-    'Beschikbaar · hybride of op afstand · regio Limburg / Hasselt',
+  availability: 'Beschikbaar · hybride of op afstand · regio Limburg / Hasselt',
   hero: 'Ik vertaal complexe noden naar heldere, performante interfaces — en neem de architectuur eromheen mee.',
 };
